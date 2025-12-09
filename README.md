@@ -1,6 +1,7 @@
 # F1DesignPatterns
 
-Projeto demonstrativo de Padrões de Projeto (Java) - Domínio: Corrida de Fórmula 1.
+Projeto demonstrativo de Padrões de Projeto (Java) - 
+## Domínio: Corrida de Fórmula 1.
 
 ## Integrantes
 - MIGUEL FERREIRA SANTOS - Matrícula: 202310207760 
