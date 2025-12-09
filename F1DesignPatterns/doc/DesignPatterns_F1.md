@@ -1,12 +1,14 @@
 
 ---
 
-## doc/DesignPatterns_F1.md  (DOCUMENTO — máximo ~2 páginas)
+## doc/DesignPatterns_F1.md 
 ```markdown
 # Aplicação de Padrões - Corrida de Fórmula 1
 
 ## Contexto do domínio
-Domínio: Corrida de Fórmula 1. Objetos centrais: Pilotos (nome, número), Carros (equipe, potência, downforce), Corrida (número de voltas, posições). O sistema simula uma corrida simples, registra eventos e exibe atualizações ao usuário.
+Domínio: Corrida de Fórmula 1.
+Objetos centrais: Pilotos (nome, número), Carros (equipe, potência, downforce), Corrida (número de voltas, posições).
+O sistema simula uma corrida simples, registra eventos e exibe atualizações ao usuário.
 
 ---
 
@@ -20,8 +22,6 @@ Domínio: Corrida de Fórmula 1. Objetos centrais: Pilotos (nome, número), Carr
 **Aplicabilidade:** construção passo-a-passo de objetos `Car` e `Driver` que têm parâmetros numerosos/opcionais.  
 **Justificativa:** ao cadastrar pilotos via input do usuário, o Builder permite montar `Car` e `Driver` de forma legível e evitar construtores com muitos parâmetros; aceita valores padrão e validação antes do `build()`.
 
-(Imagem: diagrama simples — DriverBuilder -> Driver, CarBuilder -> Car)
-
 ### 3) **Estrutural — Facade** — `RaceFacade`
 **Aplicabilidade:** oferece uma interface simplificada para a sequência de ações necessárias (capturar input, construir objetos, configurar observadores, iniciar simulação).  
 **Justificativa:** esconde a complexidade de vários subsistemas (builders, RaceManager, RaceEventManager, RaceSimulator) e fornece um ponto único de uso para o usuário/app. Facilita o uso por quem integra o módulo (ex.: UI).
@@ -32,7 +32,7 @@ Domínio: Corrida de Fórmula 1. Objetos centrais: Pilotos (nome, número), Carr
 
 ---
 
-## Fluxo de execução (resumo)
+## Fluxo de execução 
 1. `Main` cria `RaceFacade`.
 2. `RaceFacade` solicita ao usuário: número de pilotos, dados de cada piloto/carros e número de voltas.
 3. `DriverBuilder` e `CarBuilder` constroem objetos que são adicionados ao `RaceManager` (Singleton).
@@ -46,3 +46,4 @@ Domínio: Corrida de Fórmula 1. Objetos centrais: Pilotos (nome, número), Carr
 - Arquitetura simples e modular: cada padrão tem responsabilidade bem definida.
 - Fácil extensão: novos observadores (por ex. UI gráfica, logger para arquivo) podem ser adicionados sem alterar o simulador.
 - O uso do Builder evita problemas com construtores longos e melhora viabilidade para inputs do usuário.
+
