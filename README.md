@@ -1,6 +1,6 @@
 # F1DesignPatterns
 
-Projeto demonstrativo de Padrões de Projeto (Java) - 
+Projeto demonstrativo de Padrões de Projeto 
 ## Domínio: Corrida de Fórmula 1.
 
 ## Integrantes
